@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+prettier --write **/*.{js,ts,tsx}
+tsc -p tsconfig.json
+eslint . --ext .js,.jsx,.ts,.tsx
